@@ -4,9 +4,11 @@ import aiohttp
 import ccxt.async_support as ccxt
 import pandas as pd
 import pandas_ta as ta
-
 app = FastAPI()
-TOKEN = "8963718222:AAG0DAZH1oJvIy8LeXAW3Zcu5vZuIBq3qXE"
+@app.get("/")
+async def root():
+    return {"status": "online", "bot": "Crypto Telegram Bot is active and running!"}
+    TOKEN = "8963718222:AAG0DAZH1oJvIy8LeXAW3Zcu5vZuIBq3qXE"
 TELEGRAM_API_URL = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
 exchange = ccxt.binance({
