@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+ccxt
+pandas
+pandas-ta
+requests
+aiohttp
+mangum
